@@ -1,2 +1,24 @@
-package com.codegym.model.composite;public class BookDetailKey {
+package com.codegym.model.composite;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import java.io.Serializable;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Embeddable
+public class BookDetailKey implements Serializable {
+
+    @Column(name = "book_id")
+    private Integer bookId;
+
+    @Column(name = "category_id")
+    private Integer category;
 }
